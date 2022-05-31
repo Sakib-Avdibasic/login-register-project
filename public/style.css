@@ -1,0 +1,150 @@
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	color: black;
+}
+
+body {
+	width: 100%;
+}
+
+main {
+	width: 100%;
+	display: flex;
+}
+
+section {
+	width: 50%;
+	height: 100vh;
+	padding: 3em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.form-container {
+	color: gray;
+	padding: 1.5em 2em;
+	width: 70%;
+	position: relative;
+	margin: auto;
+}
+
+.form-container h2 {
+	margin-bottom: 1em;
+	font-size: 2em;
+}
+
+form {
+	animation: dropIn .5s;
+}
+
+label {
+	display: block;
+	margin-bottom: 0.5em;
+	color: gray;
+}
+
+input {
+	width: 100%;
+	font-size: 1em;
+	padding: 0.3em 0;
+	border-width: 0 0 1px 0;
+	border-color: lightgray;
+	transition: 0.3s all;
+}
+
+label:not(:first-of-type) {
+	margin-top: 2em;
+}
+
+input[type='submit'] {
+	background-color: #a9bf71;
+	color: white;
+	border: none;
+	font-weight: bold;
+	padding: 0.5em;
+	margin-top: 2em;
+	cursor: pointer;
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
+}
+
+input[type='submit']:focus,
+input[type='submit']:hover {
+	transform: translateY(-3px);
+}
+
+input:focus {
+	outline: none;
+	border-color: black;
+}
+
+.error {
+	display: block;
+	font-size: 0.9em;
+	margin: 0.5em 0 1em 0;
+	color: #d90606;
+}
+
+.hidden {
+	position: relative;
+	background-color: #a9bf71;
+	cursor: pointer;
+}
+
+.hidden form {
+	display: none;
+}
+
+.hidden h2 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-size: 1.3em;
+	color: white;
+}
+
+.hidden:hover {
+	background-color: #899c5a;
+	transition: .5s background-color;
+}
+
+@media (max-width: 768px) {
+	main {
+		flex-direction: column;
+	}
+
+	section {
+		width: 100%;
+		height: max-content;
+		padding: 1.5em;
+	}
+
+	.form-container {
+		width: 66vw;
+		transform: translate(0%, 0%);
+		margin: 1.5em auto;
+	}
+}
+
+@media (max-width: 480px) {
+	.form-container {
+		width: 100%;
+	}
+}
+
+@keyframes dropIn {
+	from {
+		transform: translateY(-100px);
+	}
+	to {
+		transform: translateY(0);
+	}
+}

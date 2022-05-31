@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/head.ejs") %>
+  <body>
+    <main>
+      <section id="login-section">
+        <div class="form-container">
+          <h2>Log in</h2>
+          <form action="/login" method="POST">
+            <label for="loginusername">Username</label>
+            <input type="text" name="loginusername" id="loginusername" autocomplete="off" autofocus>
+            <label for="loginpassword">Password</label>
+            <input type="password" name="loginpassword" id="loginpassword" autocomplete="off">
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+      </section>
+      <section id="register-section" class="hidden">
+        <div class="form-container">
+          <h2>Register</h2>
+          <form action="/register" method="POST">
+            <label for="regusername">Username</label>
+            <input type="text" name="regusername" id="regusername" autocomplete="off">
+            <label for="birthdate">Birthdate</label>
+            <input type="date" name="birthdate" id="birthdate" autocomplete="off">
+            <label for="phone">Phone number</label>
+            <input type="tel" name="phone" id="phone" placeholder="062 827 949" autocomplete="off">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" autocomplete="off">
+            <label for="regpassword">Password</label>
+            <input type="password" name="regpassword" id="regpassword" autocomplete="off">
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
