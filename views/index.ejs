@@ -6,11 +6,11 @@
       <section id="login-section">
         <div class="form-container">
           <h2>Log in</h2>
-          <form action="/login" method="POST">
+          <form action="/login" method="POST" autocomplete="off">
             <label for="loginusername">Username</label>
-            <input type="text" name="loginusername" id="loginusername" autocomplete="off" autofocus>
+            <input type="text" name="loginusername" id="loginusername" autofocus>
             <label for="loginpassword">Password</label>
-            <input type="password" name="loginpassword" id="loginpassword" autocomplete="off">
+            <input type="password" name="loginpassword" id="loginpassword">
             <input type="submit" value="Submit">
           </form>
         </div>
@@ -18,17 +18,17 @@
       <section id="register-section" class="hidden">
         <div class="form-container">
           <h2>Register</h2>
-          <form action="/register" method="POST">
+          <form action="/register" method="POST" autocomplete="off">
             <label for="regusername">Username</label>
-            <input type="text" name="regusername" id="regusername" autocomplete="off">
+            <input type="text" name="regusername" id="regusername">
             <label for="birthdate">Birthdate</label>
-            <input type="date" name="birthdate" id="birthdate" autocomplete="off">
+            <input type="date" name="birthdate" id="birthdate">
             <label for="phone">Phone number</label>
-            <input type="tel" name="phone" id="phone" placeholder="062 827 949" autocomplete="off">
+            <input type="tel" name="phone" id="phone" placeholder="062 827 949">
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" autocomplete="off">
+            <input type="email" name="email" id="email">
             <label for="regpassword">Password</label>
-            <input type="password" name="regpassword" id="regpassword" autocomplete="off">
+            <input type="password" name="regpassword" id="regpassword">
             <input type="submit" value="Submit">
           </form>
         </div>
